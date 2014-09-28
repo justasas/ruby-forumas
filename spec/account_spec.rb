@@ -7,19 +7,19 @@ describe Account do
   let(:account) { Account.new 'john', 'pass1', 'email@email.com', 1993 }
 
   it "should have account owner's id" do
-    account.id.should == 'john'
+    expect(account.id) == 'john'
   end
 
   it "should have account owner's pass" do
-    account.pass.should == 'pass1'
+    expect(account.pass) == 'pass1'
   end
 
   it "should have account owner's email" do
-    account.email.should == 'email@email.com'
+    expect(account.email) == 'email@email.com'
   end
 
   it "should have account owner's birth year" do
-    account.birth_year.should == 1993
+    expect(account.birth_year) == 1993
   end
 
   # its(:name) { should eql "John" }

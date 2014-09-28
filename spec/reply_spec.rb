@@ -3,15 +3,19 @@ SimpleCov.start
 
 require 'spec_helper'
 
-describe Topic do
+describe Reply do
   let(:owner) { Account.new 'john', 'pass1', 'email@email.com', 1993 }
-  let(:topic) { Topic.new 'title', @replie = Replie.new('title', owner, 'text') }
+  let(:reply) { Reply.new('title', owner, 'text') }
 
   it 'should have title' do
-    expect(topic.title == 'title')
+    expect(reply.title == 'title')
   end
 
   it 'should have owner' do
-    expect(topic.owner == owner)
+    expect(reply.owner == owner)
+  end
+
+  it 'should have text' do
+    expect(reply.text == 'text')
   end
 end
