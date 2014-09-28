@@ -1,7 +1,7 @@
 # Account
 class Account
-  attr_accessor :id, :pass, :email, :birth_year
-  def initialize(id, pass, email, birth_year, topics, replies)
+  attr_accessor :id, :pass, :email, :birth_year, :topics, :replies
+  def initialize(id, pass, email, birth_year, topics = [], replies = [])
     @pass = pass
     @id = id
     @email = email

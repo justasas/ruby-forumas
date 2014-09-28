@@ -1,9 +1,9 @@
 # Reply
 class Reply
-  attr_accessor :title, :owner, :text
-  def initialize(title, owner, text)
-    @title = title
+  attr_accessor :owner, :text, :time
+  def initialize(owner, text)
     @owner = owner
+    owner.replies.push(self)
     @time = Time.new
     @text = text
   end

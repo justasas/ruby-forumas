@@ -1,9 +1,15 @@
 # Topic
 class Topic
   attr_accessor :title, :owner, :replies
-  def initialize(title, owner, replies = [])
+  def initialize(title, replies = [])
     @title = title
-    @owner = owner
+    @owner = replies.first.owner
+    @owner.topics.push self
+    # owner.topics.push(self)
     @replies = replies
+  end
+
+  def addReply(reply)
+    replies.push reply
   end
 end

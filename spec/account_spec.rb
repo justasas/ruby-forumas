@@ -4,7 +4,7 @@ SimpleCov.start
 require 'spec_helper'
 
 describe Account do
-  let(:account) { Account.new 'john', 'pass1', 'email@email.com', 1993 }
+  let(:account) { Account.new 'john', 'pass1', 'email@email.com', 1993, topics = [], replies = [] }
 
   it "should have account owner's id" do
     expect(account.id) == 'john'
