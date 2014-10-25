@@ -1,0 +1,65 @@
+--- !ruby/object:Internet_forum
+title: title
+description: description
+accounts:
+- !ruby/object:Account
+  privilege: Administrator
+  pass: |
+    pass
+  name: |
+    admin
+  email: |
+    asd
+  birth_year: |
+    asd
+  topics: []
+  replies: []
+- !ruby/object:Account
+  privilege: ''
+  pass: |
+    john
+  name: |
+    john
+  email: |
+    john
+  birth_year: |
+    john
+  topics: []
+  replies: []
+categories:
+- !ruby/object:Category
+  name: |
+    sportas
+  description: |
+    apie sporta
+  forums:
+  - !ruby/object:Forum
+    title: |
+      asd
+    description: |
+      asd
+    topics: []
+  - !ruby/object:Forum
+    title: |
+      aaa
+    description: |
+      aaa
+    topics: []
+- !ruby/object:Category
+  name: |
+    blynai
+  description: |
+    apie blynus
+  forums: []
+- !ruby/object:Category
+  name: |
+    asd
+  description: |
+    asd
+  forums: []
+- !ruby/object:Category
+  name: |
+    niekas
+  description: |
+    apie nieka
+  forums: []
