@@ -1,3 +1,6 @@
 require_relative '../account'
 require_relative '../topic'
 require_relative '../reply'
+require_relative '../internet_forum'
+require_relative '../forum'
+require_relative '../category'

@@ -38,13 +38,31 @@ categories:
       asd
     description: |
       asd
-    topics: []
-  - !ruby/object:Forum
-    title: |
-      aaa
-    description: |
-      aaa
-    topics: []
+    topics:
+    - &1 !ruby/object:Topic
+      title: |
+        l
+      replies:
+      - &2 !ruby/object:Reply
+        owner: &3 !ruby/object:Account
+          privilege: Administrator
+          pass: slapt
+          name: vardas
+          email: pastas
+          birth_year: year
+          topics:
+          - *1
+          replies:
+          - *2
+        time: 2014-10-25 13:26:20.540072715 +03:00
+        text: |
+          l
+        quotes: []
+        last_edit_time: 
+        last_edit_owner: 
+      owner: *3
+      users_who_rated: []
+      ratings: []
 - !ruby/object:Category
   name: |
     blynai

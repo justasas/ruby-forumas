@@ -1,15 +1,15 @@
 # Category
 class Category
-  attr_accessor :title, :description, :forums
+  attr_accessor :name, :description, :forums
 
-  def initialize(title, description)
-    @title = title
+  def initialize(name, description)
+    @name = name
     @description = description
     @forums = []
   end
 
-  def add_forum(forum)
-    forums.push(forum)
+  def add_forum(forum, user)
+    forums.push(forum) if user.privilege == 'Administrator'
   end
 
   def remove_forum(forum_id, user)

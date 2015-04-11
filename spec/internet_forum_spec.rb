@@ -17,7 +17,8 @@ describe Internet_forum do
   end
 
   describe '#register_new_user' do
-    it 'adds new user to forum when user with same name is not already registered' do
+    it 'adds new user to forum when user with same name is
+    not already registered' do
       internet_forum.register_new_user(user)
       expect(internet_forum.accounts.last).to eq user
     end
@@ -94,7 +95,8 @@ describe Internet_forum do
   end
 
   describe '#remove_user' do
-    it 'should remove account from the accounts list when current user is administrator' do
+    it 'should remove account from the accounts list when current
+    user is administrator' do
       user2 = Account.new 'john2', 'password', 'email@mail.com', 1993
       user3 = Account.new 'john3', 'password', 'email@mail.com', 1993
       internet_forum.register_new_user(user)
@@ -105,7 +107,8 @@ describe Internet_forum do
       expect(internet_forum.accounts).to contain_exactly(user, user3)
     end
 
-    it 'should not remove account from the account list when user is not administrator' do
+    it 'should not remove account from the account list when
+      user is not administrator' do
       user2 = Account.new 'john2', 'password', 'email@mail.com', 1993
       user3 = Account.new 'john3', 'password', 'email@mail.com', 1993
       internet_forum.register_new_user(user)

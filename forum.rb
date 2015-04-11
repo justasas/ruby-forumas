@@ -1,10 +1,11 @@
+# Forum
 class Forum
   attr_accessor :title, :description, :topics
 
   def initialize(title, description)
     @title = title
     @description = description
-    @topics = [] 
+    @topics = []
   end
 
   def create_topic(topic)
@@ -12,7 +13,7 @@ class Forum
   end
 
   def delete_topic(topic_id, user)
-    if user.privilege == 'Administrator' || user.privilege == 'Moderator'
-      topics.delete_at(topic_id)
+    topics.delete_at(topic_id) if user.privilege == 'Administrator' ||
+      user.privilege == 'Moderator'
   end
 end
